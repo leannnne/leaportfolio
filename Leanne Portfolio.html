@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio - Franchesca Loredo</title>
+  
+  <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+  
+      body {
+        font-family: 'Arial', sans-serif;
+        background: white;
+        line-height: 1.6;
+        background: #BA55D3;
+      }
+
+      .navbar {
+        background-image: url('nav.jpg');
+        background-size: cover;
+        background-position: center;
+        padding: 20px 40px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+      }
+
+      .navbar ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 0px;
+      }
+
+      .navbar a {
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 25px;
+        color: pink;
+      }
+
+      .navbar:hover {
+        color: dodgerblue;
+        text-decoration: none;
+      }
+
+      .home {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+        padding: 100px 20px;
+        background-image: url('bg.jpg');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        margin-top: 60px;
+        height: 30vh;
+      }
+
+      .home-text {
+        flex: 1;
+        padding-left: 70px;
+      }
+
+      .home h1 {
+        font-size: 40px;
+        padding-top: 10px;
+        text-shadow: 
+        0 0 10px pink,
+        0 0 20px pink,
+        0 0 40px pink,
+        0 0 80px pink;
+      }
+
+      .home h2 {
+        font-size: 35px;
+        margin-bottom: 10px;
+        text-align: left;
+        color: white;
+        text-shadow: 
+        0 0 10px pink,
+        0 0 20px pink,
+        0 0 40px pink,
+        0 0 80px pink;
+      }
+
+      .home p {
+        font-size:20px;
+        padding-left: 25px;
+        color: white;
+        text-shadow: 
+        0 0 10px pink,
+        0 0 20px pink,
+        0 0 40px pink,
+        0 0 80px pink;
+      }
+
+      .portfolio-pic {
+        max-width: 300px;
+        border-radius: 100px 30px;
+        box-shadow: pink 0px 4px 10px rgba(0, 0, 0, 0.1);
+        border: solid pink 2px;
+        margin-right: 30px;
+      }
+      .portfolio-pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+       .about {
+      padding: 50px 20px;
+      height:30vh;
+      text-align: right;
+      background: #BA55D3;
+    }
+   .about-content {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    padding-top:130px;
+    margin-bottom: 0;
+
+}
+
+
+
+.about-content .text p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    margin-bottom: 10
+    
+}
+
+.about-content .text h3 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: white;
+}
+ .about-content a:hover, a:link, a:visited {
+   color: pink;
+ }
+  .about-content a{
+    text-decoration: none;
+  }
+
+    }
+        .profile-pic {
+      position: relative;
+      max-width: 300px;
+      border-radius: 20px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border: solid black 2px;
+    }
+        .profile-pic:hover {
+      transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+    }
+.projects {
+  display: flex;
+  background: violet;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  height: 30vh;
+  position: relative;
+  padding-left: 30px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.projects h2 {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 0;
+  padding-top: 40px;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.projects .text {
+  max-width: 600px;
+  text-align: center;
+  order: 2; 
+  padding-left: 90px;
+  padding-right: 90px;
+  font-size: 20px;
+}
+.projects .text h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.projects .text p {
+  margin-bottom: 15px;
+  color: white;
+}
+
+.projects a{
+  text-decoration: none;
+}
+
+
+.prod {
+  display: flex;
+  background: #BA55D3;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  height: 30vh;
+  position: relative;
+  padding: 68px;
+  color: white;
+  font-size: 20px;
+}
+
+
+.prod .text {
+  max-width: 600px;
+  text-align: center; 
+  flex: 1;
+}
+
+.project-pic {
+  max-width: 300px;
+  border-radius: 20px;
+  box-shadow: pink 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border: solid pink 2px;
+  flex-shrink: 0
+  margin-left: auto;
+}
+
+.project-pic:hover {
+  transform: scale(1.05);
+  box-shadow: pink 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+ .info p{
+     color: white ;
+     padding-left: 80px;
+     
+    }
+    .info a{
+      color:#BA55D3;
+      font-size: 17px;
+      text-decoration: none;
+      
+    }
+    .info a:hover{
+      
+    }
+    .contact {
+      padding: 50px 20px;
+    }
+    
+      
+       .container {
+      text-align: left;
+      width: 500px;
+      height: 200px;
+      margin: 0 auto;
+      padding: 20px;
+      border: white solid 2px;
+      border-radius: 20px ;
+      background: violet;
+    }
+
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 36px;
+      color: white;
+    }
+
+  </style>
+  
+</head>
+
+<body>
+  <header class="nav" id="home">
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#project">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="home">
+    <div class="home-text">
+      <h1>Welcome To My Portfolio</h1>
+      <h2>I'M FRANCHESCA LOREDO</h2>
+      <p>Graphic Designer</p>
+    </div>
+    <img src="leanne.jpeg" alt="Profile Picture" class="portfolio-pic">
+  </section>
+   <section id="about" class="about">
+      <div class="about-content">
+        <div class="text">
+          <h3>I’m Franchesca Leanne Loredo </h3>
+          <p>A <strong>Graphic Designer</strong> Here in <strong>Philippines</strong>.</p>
+          <p>Welcome to my portfolio. I'm a graphic designer and a creative visionary, inspired to bring bold ideas to life through innovative design.</p>
+           <p>
+            As a passionate artist, I'm excited to share my projects and experiences with you.
+          </p>
+          
+          <p>You Can Check My Resume <a href="https://drive.google.com/file/d/1tMzhz-k6th18oqewzTvjDLGr08peNbiU/view?usp=drivesdk"><strong>Here</strong></p> </a><br>
+          </div>
+        </div>
+  </section>
+  <section id="project" class="projects">
+       <div class="projects">
+        <img src="graph1.png" alt="Profile Picture" class="project-pic">
+        <div class="text">
+           <h2>My Projects</h2>
+            <p> A Digital Graphic Short Story Book that a worked recently for my subject project</p>
+          <p>Feel free to Read the <a href= " https://drive.google.com/drive/folders/1ZlgfHGCAt46_ri0Gxyf6AfYx5ogEFmVe?usp=drive_link"><strong>Whole Story</strong></a></p><br>
+        </div>
+         </div>
+        </section>
+  <div class="prod">
+    <div class="text">
+        
+       <h4> A Simple Graph work that i created for my Cousin</h4>
+
+    </div>
+    <img src="graph2.png" alt="Profile Picture" class="project-pic">
+  </div>
+</div>
+  </section >
+       <div class="projects">
+        <img src="graph3.png" alt="Profile Picture" class="project-pic">
+        <div class="text">
+     
+          <p>A Front Page for A Bucket List
+          </p>
+          
+          <p>I made this around SHS year for my personal use</p><br>
+        </div>
+         </div>
+  
+</section>
+<section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form>
+     <div class="info">
+      <p> Email: <a href="mailto: franchescaleanneloredo7@gmail.com">franchescaleanneloredo7@gmail.com </a></p>
+      <p> Facebook: <a href="https://www.facebook.com/leanne.loredoo?mibextid=wwXIfr&rdid=VTNzy6V8CcFJtej1&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F158sh94NSb%2F%3Fmibextid%3DwwXIfr">Leanne Loredo</a></p
+      <p> Instagram: <a href="https://www.instagram.com/ll_leandraa/=">ll_leandraa</a></p>
+      </div>
+      
+         </div>
+      </form>
+    </div>
+    
+  </section>
+
+  <footer>
+    <p style="text-align: center; color: white; font-size: 20px">&copy; 2025 Franchesca Loredo. All rights reserved.</p>
+  </footer>*/
+</body>
+
+</html>
